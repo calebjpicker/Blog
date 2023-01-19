@@ -1,7 +1,0 @@
-"0","#| include: false"
-"0","#| echo: false"
-"0","# The sk matrix of singular values connects tk and dk matrices to reproduce the the original TDM2"
-"0","# Because the sk matrix only has diagonal values, R stores it as a numeric vector"
-"0","sk2 = miniLSAspace$sk"
-"0","# round(sk2,2)"
-"0",""

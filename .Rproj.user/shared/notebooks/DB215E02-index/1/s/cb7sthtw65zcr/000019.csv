@@ -1,8 +1,0 @@
-"0","#| echo: false"
-"0","#| include: true"
-"0","# plot wordcloud using lsa results!!!"
-"0","Term_count<-apply(TDM2,1,sum)"
-"0","TCT<-t(Term_count)"
-"0",""
-"0","suppressWarnings(wordcloud(myTerms2,TCT,min.freq=3,random.order=FALSE,color=brewer.pal(8,""Dark2"")"
-"0","          ,scale=c(3.5,.1)))"

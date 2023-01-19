@@ -2,9 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/afi-analysis/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/afi-analysis/index.html"
     ]
+  },
+  {
+    "listing": "/posts/afi-analysis/index.html",
+    "items": []
   }
 ]
