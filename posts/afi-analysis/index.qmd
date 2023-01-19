@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "A (Quantitative) Textual Analysis of AFI's (A Fire Inside's) Lyrics from their Major Album Releases"
 listing:
   contents: posts
   sort: "date desc"
@@ -8,6 +8,7 @@ listing:
   sort-ui: false
   filter-ui: false
 page-layout: full
+date: "2023-01-18"
 title-block-banner: true
 format: 
   html:
@@ -25,11 +26,12 @@ toc-title: Contents
 theme: simplex
 
 repo: calebjpicker/AFI
+image: afi-sing-sorrow.jpg
 ---
 
 # Introduction to My AFI Project
 
-by [Caleb J. Picker](https://calebjpicker.quarto.pub/ "Caleb J. Picker's Curriculum Vitae") January 18, 2023, created using Quarto in RStudio
+by [Caleb J. Picker](https://calebjpicker.quarto.pub/ "Caleb J. Picker's Curriculum Vitae") on January 18, 2023, created using Quarto in RStudio
 
 [Sing the Sorrow](https://en.wikipedia.org/wiki/Sing_the_Sorrow) is my favorite album of all time. I've listened to it 1000s of times over the last 20 years since its release on March 11, 2003. If you're like me and you love AFI as much as I do, then you likely also love the rest of their discography. And if you're really like me, then you also love data science, research, and statistics.
 
