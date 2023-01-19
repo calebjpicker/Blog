@@ -1,0 +1,88 @@
+"0","#| echo: false"
+"0","#| cache: false"
+"0","library(jsonlite)"
+"0","library(tidyverse)"
+"2","Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+"
+"2","── [1mAttaching packages[22m ──────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.2 ──"
+"2","[32m✔[39m [34mggplot2[39m 3.4.0      [32m✔[39m [34mpurrr  [39m 1.0.0 
+[32m✔[39m [34mtibble [39m 3.1.8      [32m✔[39m [34mdplyr  [39m 1.0.10
+[32m✔[39m [34mtidyr  [39m 1.2.1      [32m✔[39m [34mstringr[39m 1.5.0 
+[32m✔[39m [34mreadr  [39m 2.1.3      [32m✔[39m [34mforcats[39m 0.5.2 "
+"2","── [1mConflicts[22m ─────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m  masks [34mstats[39m::filter()
+[31m✖[39m [34mpurrr[39m::[32mflatten()[39m masks [34mjsonlite[39m::flatten()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m     masks [34mstats[39m::lag()"
+"0","library(geniusr)"
+"0","library(tidytext)"
+"0","library(ggplot2)"
+"0","library(quanteda)"
+"2","Package version: 3.2.4
+Unicode version: 13.0
+ICU version: 69.1
+"
+"2","Parallel computing: 8 of 8 threads used.
+"
+"2","See https://quanteda.io for tutorials and examples.
+"
+"0","# library(spacyr)"
+"0","# library(openNLP)"
+"0","# library(rJava)"
+"0","library(glue)"
+"0","library(gplots)"
+"2","
+Attaching package: ‘gplots’
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    lowess
+
+"
+"0","library(RColorBrewer)"
+"0","library(ComplexHeatmap)"
+"2","Loading required package: grid
+"
+"2","========================================
+ComplexHeatmap version 2.14.0
+Bioconductor page: http://bioconductor.org/packages/ComplexHeatmap/
+Github page: https://github.com/jokergoo/ComplexHeatmap
+Documentation: http://jokergoo.github.io/ComplexHeatmap-reference
+
+If you use it in published research, please cite either one:
+- Gu, Z. Complex Heatmap Visualization. iMeta 2022.
+- Gu, Z. Complex heatmaps reveal patterns and correlations in multidimensional 
+    genomic data. Bioinformatics 2016.
+
+
+The new InteractiveComplexHeatmap package can directly export static 
+complex heatmaps into an interactive Shiny app with zero effort. Have a try!
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(ComplexHeatmap))
+========================================
+
+"
+"0","library(wordcloud)"
+"2","
+Attaching package: ‘wordcloud’
+
+"
+"2","The following object is masked from ‘package:gplots’:
+
+    textplot
+
+"
+"0","library(rjson)"
+"2","
+Attaching package: ‘rjson’
+
+"
+"2","The following objects are masked from ‘package:jsonlite’:
+
+    fromJSON, toJSON
+
+"

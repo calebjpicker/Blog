@@ -1,0 +1,6 @@
+"0","#| echo: false"
+"0","#| include: true"
+"0","#| fig-height: 12"
+"0","#| fig-width: 14"
+"0","# plotly::ggplotly(wordsPlot,show.legend=FALSE)"
+"0","wordsPlot"

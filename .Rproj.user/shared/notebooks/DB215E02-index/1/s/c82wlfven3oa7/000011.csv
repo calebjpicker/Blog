@@ -1,0 +1,7 @@
+"0","#| echo: false"
+"0","#| include: true"
+"0","#| code-fold: true"
+"0",""
+"0","DT::datatable(as.matrix(songs_to_rm_names),"
+"0","              caption=""This table shows the songs removed from analysis because they were not part of the major album release."","
+"0","              colnames = ""Removed Song"")"
