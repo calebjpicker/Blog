@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 0626dedc-66ee-456f-8d62-5b9b9f8ee47e
+      url: 'https://quartopub.com/sites/calebjpicker/a-coffee-driven-approach-to-data-science'

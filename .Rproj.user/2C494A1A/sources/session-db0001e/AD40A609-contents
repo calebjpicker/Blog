@@ -1,0 +1,151 @@
+---
+title: "leftover"
+---
+
+Now let's see how these frequent words relate to other words in the semantic space. Here, I created heatmaps of the words and their cosine similarity.
+
+### "feel" Has four Meanings!
+
+Using the wordcloud to determine the most frequently encountered words, I started with the word **"feel"**.
+
+Values closer to dark green are more similar. Notice also the dendrograms. These dendrograms show how certain words cluster together. At the top of the dendrogram, you can see there is a split signifying there are four clusters of words. That is, `feel` is used to mean three different things. Note that the cosine similarity ratings are darkest green to a similar extent for Clusters 1 through 4:
+
+1.  In Cluster 1, "feel" is related to word stems such as: "wall", "heal", and "picture", "strange", and "stranger".
+
+2.  In Cluster 2, "feel" is related to word stems such as: "medic", "poison", "thorn", "perfect", "gift", "ribbon", and "piece".
+
+3.  In Cluster 3, "feel" is related to word stems such as: "ceas", "weak", "hope", and "disappear".
+
+4.  In Cluster 4, "feel" is related to word stems such as: "dark", "wors", and "hurt",
+
+#### My Interpretation of "feel"
+
+"Feel" seems to be most related to an existential nausea (Cluster 1), a need to cure what destiny has in store (Cluster 2), and a desire to easy deep pain caused by other people (Cluster 3). Of course, my interpretations may not be correct, so I encourage you to analyze this further!
+
+What do you think "feel" means across these different contexts?
+
+```{r}
+#| include: true
+#| echo: false
+#| fig-cap: "Figure 3: Heatmap of the word FEEL and its relation to top 20 words in latent semantic space."
+# Show words on a heat map (authors say this is a compelling visualization)
+
+
+# Extract the closet words to "death" (a list of their distances as a named vector)
+words<-neighbors("feel",n=20,tvectors=tk2[,1:ncol(tk2)])
+# Extract the actual words, and find the distances in the space
+myCosineSpace2<-multicos(names(words),tvectors=tk2[,1:ncol(tk2)])
+col<-colorRampPalette(brewer.pal(9,"RdYlGn"))(256)
+heatmap.2(myCosineSpace2,col=col)
+ht1<-Heatmap(myCosineSpace2,col=col)
+```
+
+### "love" Has Five Meanings!
+
+This heatmap shows how "love" is used in three different ways! Interestingly, love becomes increasingly more related across clusters, with Cluster 3 being most similar.
+
+1.  In Cluster 1, love is relatively independent of word stems such as: "warn", "leav", "record", and "relax"
+
+2.  In Cluster 2, "love" is somewhat related to word stems such as: "quak" and "dirti"
+
+3.  In Cluster 3, "love" is strongly related to word stems such as: "dare" "drop" "red" and "appeal"
+
+4.  In Cluster 4, "love is
+
+5.  In Cluster 5
+
+#### My Interpretation of "love"
+
+"Love" seems to more related (darker green) to attraction (Cluster 1) and past bloody battles (Cluster 3) and to a lesser extent, fleeting and fatal encounters (Cluster 2). Of course, my interpretations may be off, so I encourage you to analyze this further!
+
+How do you see "love" being used differently across these contexts?
+
+```{}
+```
+
+```{r}
+#| include: true
+#| echo: false
+# Extract the closet words to "birth" (a list of their distances as a named vector)
+words<-neighbors("love",n=20,tvectors=tk2[,1:ncol(tk2)])
+# Extract the actual words, and find the distances in the space
+myCosineSpace2<-multicos(names(words),tvectors=tk2[,1:ncol(tk2)])
+col<-colorRampPalette(brewer.pal(9,"RdYlGn"))(256)
+heatmap.2(myCosineSpace2,col=col)
+ht2<-Heatmap(myCosineSpace2,col=col)
+
+
+```
+
+### Is "star" More Closely Related to "Born" or "Death"?
+
+In this final section, I was interested in Davey's use of the word star, as featured in songs such as [Morningstar](https://www.youtube.com/watch?v=DO2LuJBnCj4), [Death of Seasons](https://www.youtube.com/watch?v=9z1DUXCj398), and [This Celluloid Dream](https://www.youtube.com/watch?v=vVZKbIOJIJw). I thought "star" might signify being born or dying, so I first compare "star" to "born" and "death".
+
+```{r}
+#| include: true
+# pseudo<-"Does star mean birth or death"
+# pseudo<-tolower(pseudo)
+# pseudo<-removeWords(pseudo,tm::stopwords('en'))
+# # pseudo<-remove_nonletter(pseudo)
+# pseudo<-stemDocument(PlainTextDocument(pseudo))
+# pseudo<-termFreq(pseudo)
+# pseudo<-vapply(pseudo,function(x) log2(x+.00001,numeric(1)))
+# pseudo<-mapply(function(x,y) x*y,pseudo,word_entropy[names(pseudo)]) # get this working
+# pseudo<-colSums(pseudo*su_mat[names(pseudo),]) # get this working
+
+# Project onto new semantic space (prediction)
+print(paste0("Star and born have cosine similarity rating of ", round(costring("star","born" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+print(paste0("Star and death have cosine similarity rating of ", round(costring("star","death" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+
+# # red
+# color<-"red"
+# 
+# print(paste0(color," and love have cosine similarity rating of ", round(costring(color,"love" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+# print(paste0(color," and feel have cosine similarity rating of ", round(costring(color,"feel" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+# 
+# # white
+# color<-"white"
+# print(paste0(color," and love have cosine similarity rating of ", round(costring(color,"love" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+# print(paste0(color," and feel have cosine similarity rating of ", round(costring(color,"feel" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+# 
+# # black
+# color<-"black"
+# print(paste0(color," and love have cosine similarity rating of ", round(costring(color,"love" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+# print(paste0(color," and feel have cosine similarity rating of ", round(costring(color,"feel" ,tvectors=tk2[,1:ncol(tk2)]),2)))
+
+```
+
+As you can see, my guesses about what "star" means are quite off.
+
+### Related Songs
+
+Table 4 is similar to Table 3 in that they're both interactive; however, the cosine similarity ratings are calculated by song rather than by word.
+
+Among the major album releases, my all-time favorite album is Sing the Sorrow. It's difficult to narrow down my favorite song because all the songs are so good. At one point in my life, my favorite song was [This Celluloid Dream](https://open.spotify.com/track/46Y9yh2KxmtodypW4bCp6v?si=c156ebd851b44985) ([Death of Seasons](https://open.spotify.com/album/1eIzVBHA5NvX0wo2nLACew?highlight=spotify:track:0NeIz7cs9CxdgFdnB7IOKz) at another, [This Time Imperfect](https://open.spotify.com/track/0f3oWkXIrXMsObtUuMTIuu?si=6204960bb859423d) \[start at 4:32!\] at another, and so on!).
+
+Similar to what I did for "eye" above, I used the horizontal scroll bar to find "This Celluloid Dream.txt". The top 3 are:
+
+-   "[Twisted Tongues](https://open.spotify.com/track/5x1Shc6k7r3hBYyjNaaddy?si=7f8a34e8ad5e4355)" (+.52); "[Strength through Wounding](https://open.spotify.com/track/6I3ICkKo3D5oOPitKYZS65?si=df99b34ee3dc472e)" (+.20); "[I Am Trying Very Hard to be Here](https://open.spotify.com/album/3bvsBOFhdRGsvEwIdRoWZz?highlight=spotify:track:2x3WqvBW2FdaMV2hfSHt0b)" (+.18)
+
+Apparently, [This Celluloid Dream](https://open.spotify.com/track/2x3WqvBW2FdaMV2hfSHt0b?si=e23df7c67afd4f13) has some overlap with songs across their discography, and is most closely related to [Twisted Tongues](https://open.spotify.com/track/5x1Shc6k7r3hBYyjNaaddy?si=7f8a34e8ad5e4355)! This is probably because both songs use the stem 'twist' quite frequently (although, remember, all lines, including choruses, only show up once in my analysis).
+
+Tell me some of the interesting things you discovered in the comment section below!
+
+```{r}
+#| echo: false
+#| freeze: false
+#| include: true
+#| cache: true
+# STep 2: Analyzing the Semantic Space 
+# assumes that miniLSAspace has been created
+# Now we will calculate cosine similarity
+myDocs<-rownames(dk2)
+
+# round(myCosineSpace2,2)
+# DT::datatable(round(myCosineSpace2,2))
+# Can create cosine space for documents as well
+myCosineSpace3<-multicos(myDocs,tvectors=dk2)
+DT::datatable(round(myCosineSpace3,2),
+              options=list(scrollX=TRUE,scrollY=TRUE),
+              caption="Table 4: Cosine similarity table for relationships between songs.")
+```

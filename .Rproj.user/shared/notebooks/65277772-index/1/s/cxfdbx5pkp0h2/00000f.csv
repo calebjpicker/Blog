@@ -1,0 +1,8 @@
+"0","#| echo: false"
+"0","#| output: false"
+"0","#| cache: true"
+"0","library(geniusr)# find artist ID"
+"0","# genius token API"
+"0","gen_token=""CqypOkltZXuxwnwuEvLm6OQB_uonxqSJ-w-rWIBamPSAg0sJdEia2g1iCZSNwWhD"" # NEED TO HIDE THIS SOMEHOW"
+"0","# Find the artist ID."
+"0","search_artist(""AFI"",access_token=gen_token) #36520"
