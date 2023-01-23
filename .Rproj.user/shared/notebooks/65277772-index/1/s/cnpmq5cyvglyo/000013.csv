@@ -1,7 +1,0 @@
-"0","# Save Artist ID as variable."
-"0","AFI_id<-36520"
-"0","# Get all songs based on Artist ID variable."
-"0","songs<-get_artist_songs_df(AFI_id,access_token = gen_token)"
-"0","# Copy songs as new dataframe (to preserve original import)"
-"0","songs_df<-songs"
-"0","# Get song ids"

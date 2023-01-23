@@ -1,0 +1,27 @@
+"0","  # library(rjson)"
+"0","library(jsonlite)"
+"2","
+Attaching package: ‘jsonlite’
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    flatten
+
+"
+"0","# library(rjson)"
+"0",""
+"0","# Remove stopwords"
+"0","tidyLyrics <- allLyricsTokenised %>%"
+"0","  anti_join(stop_words)"
+"2","Joining, by = ""word"""
+"0","tidyLyricscount<-tidyLyrics %>%"
+"0","  count(word, sort = TRUE)"
+"0",""
+"0","tidyLyricscount1<- tidyLyrics %>%"
+"0","  count(song_name,word, sort = TRUE)"
+"0",""
+"0",""
+"0","DT::datatable(tidyLyricscount,"
+"0","              caption = ""Table 3: Word frequency across all of AFI's major album releases (with stop-words removed)."","
+"0","              colnames=c(""Word"",""Frequency""))"

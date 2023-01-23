@@ -1,0 +1,5 @@
+"0","  #             options = list("
+"0","  # initComplete = JS("
+"0","  #   ""function(settings, json) {"","
+"0","  #   ""$(this.api().table().header()).css({'background-color': '#92141c', 'color': '#767975'});"","
+"0","  #   ""}"")"

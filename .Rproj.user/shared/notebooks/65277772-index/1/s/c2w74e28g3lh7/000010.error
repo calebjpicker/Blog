@@ -1,0 +1,1 @@
+{"frames":[{"func":"allLyrics2 %>% unnest_tokens(word, line, token = \"words\")","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error in unnest_tokens(., word, line, token = \"words\") : \n  could not find function \"unnest_tokens\"\n"}

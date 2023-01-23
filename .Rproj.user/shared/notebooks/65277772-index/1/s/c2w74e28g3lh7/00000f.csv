@@ -1,0 +1,6 @@
+"0","allLyricsTokenised <- allLyrics2 %>%
+  unnest_tokens(word, line,token=""words"")
+"
+"2","Error in unnest_tokens(., word, line, token = ""words"") : 
+  could not find function ""unnest_tokens""
+"
