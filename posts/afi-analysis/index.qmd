@@ -56,23 +56,24 @@ setwd(dir)
 
 ```{r}
 #| echo: false
-#| cache: false
+#| cache: true
 #| include: false
-library(jsonlite)
-library(tidyverse)
-library(geniusr)
-library(tidytext)
-library(ggplot2)
-library(quanteda)
-# library(spacyr)
-# library(openNLP)
-# library(rJava)
-library(glue)
-library(gplots)
-library(RColorBrewer)
-library(ComplexHeatmap)
-library(wordcloud)
-library(rjson)
+#| output: false
+# library(jsonlite)
+# library(tidyverse)
+# library(geniusr)
+# library(tidytext)
+# library(ggplot2)
+# library(quanteda)
+# # library(spacyr)
+# # library(openNLP)
+# # library(rJava)
+# library(glue)
+# library(gplots)
+# library(RColorBrewer)
+# library(ComplexHeatmap)
+# library(wordcloud)
+# library(rjson)
 
 ```
 
@@ -96,9 +97,9 @@ songs_df<-songs
 ```
 
 ```{r}
-#| freeze: true
 #| cache: true
 #| include: false
+#| output: false
 ids <- c(as.character(songs_df$song_id))
 # remove songs that are repeats or live versions or not on a main album
 # create list of songs by song id to remove
@@ -580,12 +581,7 @@ tk2_numfactors<-ncol(tk2)
 
 ```
 
-```{r}
-#| include: true
-#| echo: false
-tk2_round<-round(tk2,2)
-DT::datatable(tk2_round,
-               options=list(scrollX=TRUE,scrollY=TRUE))
+```{}
 ```
 
 ```{r}
@@ -847,9 +843,17 @@ One of the key features of latent semantic analysis is that it can reveal hidden
 
 Here, I will present all `r tk2_numfactors` from the analysis, but I will only analyze three of the hidden themes. In my estimation, the hidden themes aren't so straightforward, so some help interpreting them would be welcomed!
 
+```{r}
+#| include: true
+#| echo: false
+tk2_round<-round(tk2,2)
+DT::datatable(tk2_round,
+               options=list(scrollX=TRUE,scrollY=TRUE))
+```
+
 The approach I took was to find hidden themes that were easier for me to interpret to better demonstrate the power of this analysis. The hidden themes are labeled V1 to V50, so feel free to explore to your heart's content.
 
-This next table extracts the top 5 words (and their loadings) for each of the `r tk2_numfactors` themes.
+This next table extracts the top 5 words (and their loadings) for each of the `r tk2_numfactors` themes to make interpretation easier.
 
 ```{r}
  # Top 5 of each factor
